@@ -51,7 +51,7 @@
               <div className='flex flex-row md:flex-row md:justify-start gap-2 md:gap-4'>
                     <span className='textaAltaMedium font-18 self-center text-gray-300 pt-2 pr-2'>{id}</span>
                     <button className={`${styles.accordionHeader}`} onClick={toggleAccordion}>
-                      <h3 className='text-left textaAltaMedium font-22'>{title}</h3>
+                      <h3 className='text-left textaAltaMedium text-black font-22'>{title}</h3>
                     </button>
                   
               </div>

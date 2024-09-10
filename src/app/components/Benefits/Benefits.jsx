@@ -38,7 +38,7 @@ const Benefits = () => {
     <div className={`px-5 bg-green md:bg-white`}>
       <div className='container mx-auto flex flex-col gap-4 py-12'>
 
-      <h2 className="font-26 textaHeavy text-center font-semibold mb-9">Con Plus disfrutá:</h2>
+      <h2 className="font-26 textaHeavy text-center font-black mb-9">Con Plus disfrutá:</h2>
 
 
 {/*
