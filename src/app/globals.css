@@ -165,3 +165,8 @@ body {
 .bg-green{
   background-color: #C1F9F3;
 }
+
+
+.swiper{
+  overflow: visible !important;
+}

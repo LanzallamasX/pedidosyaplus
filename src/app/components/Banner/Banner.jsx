@@ -31,8 +31,8 @@ const Banner = () => {
   return (
 
     <>
-    <div className={`bg-[#090017] text-white ${styles.gradientBg} flex px-5`}>
-            <div className='w-1/2 flex flex-col justify-center items-center gap-4 relative'>
+    <div className={`bg-[#090017] text-white ${styles.gradientBg} flex flex-col md:flex-row px-5 pt-20`}>
+            <div className='w-full md:w-1/2 flex flex-col justify-center items-center gap-4 relative'>
                 <div>
                   <BgPromo >
                     <span className='font-32 textaBlackItalic'>4 MESES GRATIS</span>
@@ -44,8 +44,8 @@ const Banner = () => {
                 </p>
             </div>
 
-            <div className='w-1/2 flex justify-start relative'>
-                <Image className='absolute top-[50px] left-[100px] w-6/12' src="/images/tramaBanner.svg" alt="Uruguay" width={463} height={294} />
+            <div className='w-full md:w-1/2 flex justify-start relative'>
+                <Image className='absolute top-[50px] left-[0px] md:left-[100px] w-full md:w-6/12' src="/images/tramaBanner.svg" alt="Uruguay" width={463} height={294} />
                 <Image className='z-10' src="/images/girlBanner.png" alt="girl" width={506} height={390} />
 
             </div>

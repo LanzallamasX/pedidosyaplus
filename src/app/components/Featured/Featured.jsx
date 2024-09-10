@@ -27,7 +27,7 @@ const FeaturedData = [
 const Featured = () => {
   return (
       <div className=' mx-auto flex flex-col gap-4 '>
-          <div className='flex'>
+          <div className='flex flex-col md:flex-row'>
               {FeaturedData.map((featuredCard) => (
                     <CardFeatured 
                       key={featuredCard.id} 

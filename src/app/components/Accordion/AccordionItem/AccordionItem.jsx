@@ -45,17 +45,17 @@
 
     return (
       <div ref={rowRef} className={`${styles.accordion} ${className}`} >
-        <div className='container w-11/12 mx-auto px-5 md:px-5  md:py-4  border-b '>
+        <div className='container w-full md:w-11/12 mx-auto px-5 md:px-5  md:py-4  border-b '>
 
           <div className='flex justify-between items-start md:items-center' onClick={toggleAccordion}>
-              <div className='flex flex-col md:flex-row md:justify-start gap-2 md:gap-4'>
+              <div className='flex flex-row md:flex-row md:justify-start gap-2 md:gap-4'>
                     <span className='textaAltaMedium font-18 self-center text-gray-300 pt-2'>{id}</span>
                     <button className={`${styles.accordionHeader}`} onClick={toggleAccordion}>
                       <h3 className='text-left textaAltaMedium font-22'>{title}</h3>
                     </button>
                   
               </div>
-              <div className='flex justify-center items-center'>          
+              <div className='flex justify-center self-center items-center'>          
                   <button className="p-2 text-black-400 hover:text-black-500 hover:border-gray-500 ">
                     <svg ref={openOloseRef} className="w-6 h-6" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="chevron">
@@ -71,7 +71,7 @@
               ref={contentRef}
               style={{ height: 0, overflow: 'hidden' }}
             >
-              <div className={`${styles.accordionInnerContent} textaRegular font-20 w-11/12 text-gray-400 pl-12 pr-12 pb-6 pt-6`}>
+              <div className={`${styles.accordionInnerContent} textaRegular font-20 w-11/12 text-gray-400 pl-6 md:pl-9 pr-12 pb-6 pt-6`}>
                 {content}
               </div>
     
