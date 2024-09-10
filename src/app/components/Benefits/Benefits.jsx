@@ -59,7 +59,7 @@ const Benefits = () => {
 
 
 
-        <div className="w-8/12 mx-auto gap-4">
+        <div className=" w-10/12 sm:8/12 md:w-full lg:w-11/12 xl:w-8/12 mx-auto gap-4">
       <Swiper
         spaceBetween={10}
         effect="coverflow"
@@ -96,7 +96,7 @@ const Benefits = () => {
             },
           },
           640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             centeredSlides: false,
             coverflowEffect: {
               rotate: 0,
@@ -106,7 +106,34 @@ const Benefits = () => {
               slideShadows: false,
             },
           },
-          1024: {
+
+          750: {
+            slidesPerView: 1,
+            centeredSlides: false,
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 0,
+              depth: 0,
+              modifier: 1,
+              slideShadows: false,
+            },
+          },
+
+
+          760: {
+            slidesPerView: 3,
+            centeredSlides: false,
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 0,
+              depth: 0,
+              modifier: 1,
+              slideShadows: false,
+            },
+          },
+
+
+          960: {
             slidesPerView: 3,
             centeredSlides: false,
             coverflowEffect: {

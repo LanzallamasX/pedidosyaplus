@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
     <>
         <NavBar />
 
-          <main>
+          <main className="overflow-hidden">
             {children}
           </main>
 
