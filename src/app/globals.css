@@ -2,6 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@font-face {
+  font-family: 'textaRegular';
+  src: url("/fonts/TextaAlt-Regular_0.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'TextaAltaMedium';
+  src: url("/fonts/TextaAlt-Medium_0.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'textaHeavy';
+  src: url("/fonts/TextaAlt-Heavy_0.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'textaBold';
+  src: url("/fonts/TextaAlt-Bold_0.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'textaBlack';
+  src: url("/fonts/TextaAlt-Black_0.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'textaBlackItalic';
+  src: url("/fonts/TextaAlt-BlackItalic_0.woff") format('woff');
+}
+
+
+html {
+  font-family: 'textaRegular';
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 70px;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #FA0050;
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #d80045;
+}
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,16 +77,91 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #FFFFFF;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+
+.font-48{
+  font-size: clamp(1.75rem, 3vw, 3rem); 
+  line-height: 1;
+}
+
+.font-40{
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem); 
+  line-height: 1;
+}
+
+.font-32{
+  font-size: clamp(1.625rem, 2vw, 2rem); 
+  line-height: 1;
+}
+
+.font-26{
+  font-size: clamp(1.25rem, 1.625vw, 1.625rem); 
+  line-height: 1;
+}
+
+.font-22{
+  font-size: clamp(1.25rem, 1.325vw, 1.325rem); 
+  line-height: 1;
+}
+
+.font-20{
+  font-size: clamp(1rem, 1.25vw, 1.25rem); 
+  line-height: 1;
+}
+
+.font-18{
+  font-size: clamp(1rem, 1.125vw, 1.125rem); 
+  line-height: 1;
+}
+
+.font-14{
+  font-size: clamp(0.875rem, 0.875vw, 0.875rem); 
+  line-height: 1;
+}
+
+.textaRegular {
+  font-family: 'textaRegular';
+}
+
+.textaAltaMedium {
+  font-family: 'TextaAltaMedium';
+  font-weight: 300;
+}
+
+.textaHeavy {
+  font-family: 'textaHeavy';
+}
+
+.textaBold {
+  font-family: 'textaBold';
+}
+
+.textaBlack {
+  font-family: 'textaBlack';
+}
+
+.textaBlackItalic {
+  font-family: 'textaBlackItalic';
+}
+
+
+.bg-yellow{
+  background-color: #FFE438;
+}
+
+.bg-red{
+  background-color: #FA0050;
+}
+
+.bg-green{
+  background-color: #C1F9F3;
 }
