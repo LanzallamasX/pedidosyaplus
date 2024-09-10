@@ -122,17 +122,16 @@ const Benefits = () => {
 
 
 
-        {benefitsData.map((benefit) => (
-            <SwiperSlide className={`${styles.shadow}`}>
-              <CardBenefits 
-                key={benefit.id} 
-                imageSrc={benefit.imageSrc} 
-                alt={benefit.alt} 
-                title={benefit.title} 
-                description={benefit.description} 
-              />
-            </SwiperSlide>
-          ))}
+      {benefitsData.map((benefit) => (
+        <SwiperSlide key={benefit.id} className={`${styles.shadow}`}>
+          <CardBenefits 
+            imageSrc={benefit.imageSrc} 
+            alt={benefit.alt} 
+            title={benefit.title} 
+            description={benefit.description} 
+          />
+        </SwiperSlide>
+      ))}
 
 
         
