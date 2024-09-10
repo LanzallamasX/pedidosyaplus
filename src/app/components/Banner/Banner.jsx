@@ -31,20 +31,20 @@ const Banner = () => {
   return (
 
     <>
-    <div className={`bg-[#090017] text-white ${styles.gradientBg} flex flex-col md:flex-row px-5 pt-20`}>
-            <div className='w-full md:w-1/2 flex flex-col justify-center items-center gap-4 relative'>
+    <div className={`bg-[#090017] text-white ${styles.gradientBg} flex flex-col md:flex-row px-5 pt-20 overflow-hidden`}>
+            <div className='w-full md:w-1/2 flex flex-col justify-center items-center gap-6 md:gap-4 relative'>
                 <div>
                   <BgPromo >
                     <span className='font-32 textaBlackItalic'>4 MESES GRATIS</span>
                   </BgPromo>
                 </div>
                 <Image className='mix-blend-lighten' src="/images/spotify.png" alt="girl" width={216} height={30} />
-                <p className='font-14 textaAltaMedium w-1/2 text-center'>
-                  * Válido para nuevos usuarios de Spotify Premium. <br /> Aplican Términos y Condiciones
+                <p className='font-14 textaAltaMedium w-8/12 md:w-4/12 text-center pb-9'>
+                  * Válido para nuevos usuarios de Spotify Premium. Aplican Términos y Condiciones
                 </p>
             </div>
 
-            <div className='w-full md:w-1/2 flex justify-start relative'>
+            <div className='w-full md:w-1/2 flex justify-center md:justify-start relative'>
                 <Image className='absolute top-[50px] left-[0px] md:left-[100px] w-full md:w-6/12' src="/images/tramaBanner.svg" alt="Uruguay" width={463} height={294} />
                 <Image className='z-10' src="/images/girlBanner.png" alt="girl" width={506} height={390} />
 

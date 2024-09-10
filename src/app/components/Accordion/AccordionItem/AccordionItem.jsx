@@ -49,7 +49,7 @@
 
           <div className='flex justify-between items-start md:items-center' onClick={toggleAccordion}>
               <div className='flex flex-row md:flex-row md:justify-start gap-2 md:gap-4'>
-                    <span className='textaAltaMedium font-18 self-center text-gray-300 pt-2'>{id}</span>
+                    <span className='textaAltaMedium font-18 self-center text-gray-300 pt-2 pr-2'>{id}</span>
                     <button className={`${styles.accordionHeader}`} onClick={toggleAccordion}>
                       <h3 className='text-left textaAltaMedium font-22'>{title}</h3>
                     </button>
@@ -71,7 +71,7 @@
               ref={contentRef}
               style={{ height: 0, overflow: 'hidden' }}
             >
-              <div className={`${styles.accordionInnerContent} textaRegular font-20 w-11/12 text-gray-400 pl-6 md:pl-9 pr-12 pb-6 pt-6`}>
+              <div className={`${styles.accordionInnerContent} textaRegular font-20 w-full text-gray-400 pl-9 md:pl-12 pr-12 pb-6 pt-6`}>
                 {content}
               </div>
     
