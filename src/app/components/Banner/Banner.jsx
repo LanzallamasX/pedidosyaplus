@@ -39,8 +39,8 @@ const Banner = () => {
                   </BgPromo>
                 </div>
                 <Image className='mix-blend-lighten' src="/images/spotify.png" alt="girl" width={216} height={30} />
-                <p className='font-18 textaAltaMedium w-1/2 text-center'>
-                  * Válido para nuevos usuarios de Spotify Premium. Aplican Términos y Condiciones
+                <p className='font-14 textaAltaMedium w-1/2 text-center'>
+                  * Válido para nuevos usuarios de Spotify Premium. <br /> Aplican Términos y Condiciones
                 </p>
             </div>
 

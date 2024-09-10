@@ -1,0 +1,14 @@
+.accordionHeader{
+    padding: 1.5rem 0rem 1rem 0rem;
+    display: block;
+  }
+
+  .row1{
+    background-color: #F1F1F1;    
+    border-bottom: 1px solid #000;
+  }
+  
+  .row2{
+    background-color: #490CAB0D;    
+    border-bottom: 1px solid #000;
+  }
