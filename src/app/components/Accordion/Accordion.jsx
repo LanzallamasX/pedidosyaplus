@@ -50,7 +50,7 @@ const Accordion = ({ items }) => {
           isOpen={openIndex === index}
           toggleAccordion={() => handleToggle(index)}
         />
-      ))}
+      ))} 
     </div>
   );
 };

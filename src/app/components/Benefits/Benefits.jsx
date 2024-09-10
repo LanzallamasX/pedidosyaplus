@@ -125,7 +125,7 @@ const Benefits = () => {
         {benefitsData.map((benefit) => (
             <SwiperSlide className={`${styles.shadow}`}>
               <CardBenefits 
-               // key={benefit.id} 
+                key={benefit.id} 
                 imageSrc={benefit.imageSrc} 
                 alt={benefit.alt} 
                 title={benefit.title} 
