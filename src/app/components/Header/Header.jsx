@@ -3,7 +3,9 @@ import BgPromo from '../BgPromo/BgPromo';
 import styles from './Header.module.css'; 
 import MainButton from '../MainButton/MainButton';
 
-const Header = () => {
+import { pageData } from '@/app/data/data';
+
+const Header = ({section}) => {
 
   return (
 

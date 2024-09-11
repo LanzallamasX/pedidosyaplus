@@ -2,6 +2,8 @@ import styles from './Banner.module.css';
 import Image from 'next/image';
 import BgPromo from '../BgPromo/BgPromo';
 import MainButton from '../MainButton/MainButton';
+import { useState } from 'react';
+import Modal from '../Modal/Modal';
 
 const BannerData = [
     {
@@ -28,6 +30,11 @@ const BannerData = [
 ];
 
 const Banner = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
 
     <>
@@ -40,7 +47,7 @@ const Banner = () => {
                 </div>
                 <Image className='mix-blend-lighten' src="/images/spotify.png" alt="girl" width={216} height={30} />
                 <p className='font-14 textaAltaMedium w-8/12 md:w-4/12 text-center pb-9'>
-                  * Válido para nuevos usuarios de Spotify Premium. Aplican Términos y Condiciones
+                <a onClick={openModal} className="font-14 text-center cursor-pointer hover:text-gray-400">* Válido para nuevos usuarios de Spotify Premium. Aplican Términos y Condiciones</a>
                 </p>
             </div>
 
@@ -54,6 +61,8 @@ const Banner = () => {
     <div className='flex justify-center items-center py-16 bg-green' >
         <MainButton />
     </div>
+
+    <Modal isOpen={isModalOpen} onClose={closeModal} />
 
     </>
 
