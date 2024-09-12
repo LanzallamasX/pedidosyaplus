@@ -4,6 +4,7 @@ import BgPromo from '../BgPromo/BgPromo';
 import MainButton from '../MainButton/MainButton';
 import { useState } from 'react';
 import Modal from '../Modal/Modal';
+import { pageData } from '@/app/data/data';
 
 const BannerData = [
     {
@@ -29,7 +30,9 @@ const BannerData = [
     }
 ];
 
-const Banner = () => {
+const Banner = ({section}) => {
+
+  const {promo, imageSrc, disclaimer, logo, cta} = pageData[section];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
@@ -38,31 +41,31 @@ const Banner = () => {
   return (
 
     <>
-    <div className={`bg-[#090017] text-white ${styles.gradientBg} flex flex-col md:flex-row px-5 pt-20 overflow-hidden`}>
+    <section id="banner" className={`bg-[#090017] text-white ${styles.gradientBg} flex flex-col md:flex-row px-5 pt-20 overflow-hidden`}>
             <div className='w-full md:w-1/2 flex flex-col justify-center items-center gap-6 md:gap-4 relative'>
                 <div>
                   <BgPromo >
-                    <span className='font-32 textaBlackItalic'>4 MESES GRATIS</span>
+                    <span className='font-32 textaBlackItalic'>{promo.value}</span>
                   </BgPromo>
                 </div>
-                <Image className='mix-blend-lighten' src="/images/spotify.png" alt="girl" width={216} height={30} />
+                <Image className='mix-blend-lighten' src={promo.imagePromo} alt="girl" width={216} height={30} />
                 <p className='font-14 textaAltaMedium w-8/12 md:w-4/12 text-center pb-9'>
-                <a onClick={openModal} className="font-14 text-center cursor-pointer hover:text-gray-400">* Válido para nuevos usuarios de Spotify Premium. Aplican Términos y Condiciones</a>
+                <a onClick={openModal} className="font-14 text-center cursor-pointer hover:text-gray-400">{promo.disclaimer}</a>
                 </p>
             </div>
 
             <div className='w-full md:w-1/2 flex justify-center md:justify-start relative'>
                 <Image className='absolute top-[50px] left-[0px] md:left-[100px] w-full md:w-6/12' src="/images/tramaBanner.svg" alt="Uruguay" width={463} height={294} />
-                <Image className='z-10' src="/images/girlBanner.png" alt="girl" width={506} height={390} />
+                <Image className='z-10' src={promo.imageSrc} alt="girl" width={506} height={390} />
 
             </div>
-    </div>
+    </section>
 
     <div className='flex justify-center items-center py-16 bg-green' >
-        <MainButton />
+        <MainButton textButton={cta} />
     </div>
 
-    <Modal isOpen={isModalOpen} onClose={closeModal} />
+    <Modal isOpen={isModalOpen} onClose={closeModal} content={disclaimer} logo={logo} />
 
     </>
 

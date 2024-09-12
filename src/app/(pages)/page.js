@@ -11,12 +11,12 @@ import Faq from "../components/Faq/Faq";
 export default function Home() {
   return (
     <>
-    <Header />   
-    <Benefits /> 
-    <Featured />
-    <Banner />
-    <Faq />
-    <Footer />
+    <Header section="heroSection" />   
+    <Benefits section="benefitSection" /> 
+    <Featured section="featuresSection" />
+    <Banner section="bannerSection" />
+    <Faq section="faqsSection" />
+    <Footer section="footerSection" />
     </>
   );
 }

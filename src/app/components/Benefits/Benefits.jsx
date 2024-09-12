@@ -1,6 +1,5 @@
 import styles from './Benefits.module.css'; 
 import CardBenefits from '../CardBenefits/CardBenefits';
-import Image from 'next/image';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -9,55 +8,19 @@ import 'swiper/css/pagination';  // Importar estilos de paginación
 import 'swiper/css/autoplay';    // Importar estilos de autoplay (opcional)
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 
-const benefitsData = [
-    {
-      id: 1,
-      imageSrc: '/images/icon1.png',
-      alt: 'Envios',
-      title: 'Envíos gratis ilimitados',
-      description: 'en miles de locales'
-    },
-    {
-      id: 2,
-      imageSrc: '/images/icon2.png',
-      alt: 'Promociones',
-      title: 'Promociones exclusivas',
-      description: 'en restaurantes y supermercados'
-    },
-    {
-      id: 3,
-      imageSrc: '/images/icon3.png',
-      alt: 'Descuentos',
-      title: 'Descuentos y beneficios',
-      description: 'con medios de pago'
-    }
-];
+import { pageData } from '@/app/data/data';
 
-const Benefits = () => {
+
+const Benefits = ({section}) => {
+
+  const { title, cards } = pageData[section];
+
+
   return (
-    <div className={`px-5 bg-green md:bg-white`}>
+    <section id="benefits" className={`px-5 bg-green md:bg-white`}>
       <div className='container mx-auto flex flex-col gap-4 py-12'>
 
-      <h2 className="font-26 textaHeavy text-center text-black mb-9">Con Plus disfrutá:</h2>
-
-
-{/*
-        <div className="flex mx-auto justify-center space-x-8">
-          {benefitsData.map((benefit) => (
-            <CardBenefits 
-              key={benefit.id} 
-              imageSrc={benefit.imageSrc} 
-              alt={benefit.alt} 
-              title={benefit.title} 
-              description={benefit.description} 
-            />
-          ))}
-        </div>  
-*/
-        }
-
-
-
+      <h2 className="font-26 textaHeavy text-center text-black mb-9">{title}</h2>
 
         <div className=" w-10/12 sm:8/12 md:w-full lg:w-11/12 xl:w-8/12 mx-auto gap-4">
       <Swiper
@@ -149,13 +112,13 @@ const Benefits = () => {
 
 
 
-      {benefitsData.map((benefit) => (
-        <SwiperSlide key={benefit.id} className={`${styles.shadow}`}>
+      {cards.map((card) => (
+        <SwiperSlide key={card.id} className={`${styles.shadow}`}>
           <CardBenefits 
-            imageSrc={benefit.imageSrc} 
-            alt={benefit.alt} 
-            title={benefit.title} 
-            description={benefit.description} 
+            imageSrc={card.imageSrc} 
+            alt={card.alt} 
+            title={card.title} 
+            description={card.description} 
           />
         </SwiperSlide>
       ))}
@@ -170,7 +133,7 @@ const Benefits = () => {
 
 
       </div>
-    </div>
+    </section>
   );
 }
 

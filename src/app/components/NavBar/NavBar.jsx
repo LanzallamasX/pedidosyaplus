@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function NavBar() {
   return (
@@ -10,9 +11,9 @@ export default function NavBar() {
         </div>
 
         <div className="hidden md:flex items-center space-x-6 textaRegular font-18">
-          <a href="#" className="hover:text-gray-400">BENEFICIOS</a>
-          <a href="#" className="hover:text-gray-400">PREGUNTAS FRECUENTES</a>
-          <a href="#" className="hover:text-gray-400">SUSCRIBITE</a>
+          <Link href="#benefits" className="hover:text-gray-400">BENEFICIOS</Link>
+          <Link href="#faq" className="hover:text-gray-400">PREGUNTAS FRECUENTES</Link>
+          <Link href="#" className="hover:text-gray-400">SUSCRIBITE</Link>
           {/* Country Selector */}
           <div className="flex items-center space-x-1">
             <Image src="/images/flag-uy.png" alt="Uruguay" width={24} height={16} />

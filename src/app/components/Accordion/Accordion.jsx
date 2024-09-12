@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import AccordionItem from './AccordionItem/AccordionItem';
 import styles from './Accordion.module.css'; 
+import { pageData } from '@/app/data/data';
 
 const faqData = [
   {
@@ -32,8 +33,9 @@ const faqData = [
   }
 ];
 
-const Accordion = ({ items }) => {
+const Accordion = ({ section }) => {
   const [openIndex, setOpenIndex] = useState(null);
+//  const { accordion } = pageData[section];
 
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);

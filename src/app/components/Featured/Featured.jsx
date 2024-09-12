@@ -1,42 +1,23 @@
-import styles from './Featured.module.css'; 
-import Image from 'next/image';
 import CardFeatured from '../CardFeatured/CardFeatured';
+import { pageData } from '@/app/data/data';
 
-const FeaturedData = [
-    {
-      id: 1,
-      imageSrc: '/images/icon4.png',
-      alt: 'Envios',
-      title: 'Envíos gratis ilimitados',
-      description: 'En tus pedidos de restaurantes, supermercados, farmacias, bebidas y más. Disfrutá este beneficio en tus locales preferidos.',
-      bgColor: 'bg-red',
-      textColor: 'text-white'
-    },
-    {
-      id: 2,
-      imageSrc: '/images/icon3.png',
-      alt: 'Promociones',
-      title: 'Descuentos Exclusivos',
-      description: 'Descuentos exclusivos en los locales que más te gustan y promociones nuevas todas las semanas.',
-      bgColor: 'bg-green',
-      textColor: 'text-black'
-    },
 
-];
+const Featured = ({section}) => {
 
-const Featured = () => {
+  const {cards} = pageData[section]
+
   return (
       <div className=' mx-auto flex flex-col gap-4 '>
           <div className='flex flex-col md:flex-row'>
-              {FeaturedData.map((featuredCard) => (
+              {cards.map((card) => (
                     <CardFeatured 
-                      key={featuredCard.id} 
-                      imageSrc={featuredCard.imageSrc} 
-                      alt={featuredCard.alt} 
-                      title={featuredCard.title} 
-                      description={featuredCard.description} 
-                      bgColor={featuredCard.bgColor}
-                      textColor={featuredCard.textColor}
+                      key={card.id} 
+                      imageSrc={card.imageSrc} 
+                      alt={card.alt} 
+                      title={card.title} 
+                      description={card.description} 
+                      bgColor={card.bgColor}
+                      textColor={card.textColor}
                     />
                   ))}
             </div>

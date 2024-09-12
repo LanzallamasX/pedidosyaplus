@@ -2,7 +2,9 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
 
-const Modal = ({ isOpen, onClose }) => {
+const Modal = ({ isOpen, onClose, content, logo }) => {
+
+
   const modalRef = useRef();
 
   useEffect(() => {
@@ -33,53 +35,11 @@ const Modal = ({ isOpen, onClose }) => {
         className="bg-white flex flex-col p-8 rounded-lg shadow-lg w-1/2 max-h-[80vh] overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-          <Image className='self-center mb-6' src="/images/logo_spotify.png" alt="girl" width={145} height={63} />
+          <Image className='self-center mb-6' src={logo} alt="Pedidos ya plus" width={145} height={63} />
         {/* Contenedor de texto scrolleable */}
-        <div className="overflow-y-auto max-h-72">
-          <p className='pb-4'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Aenean eu leo
-            quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula
-            ut id elit. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur. Praesent
-            commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.
-          </p>
-          <p className='pb-4'>
-            More content... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-            venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-            venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit.
-          </p>
-          <p className='pb-4'>
-            More content... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-            venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-            venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit.
-          </p>
-          <p className='pb-4'>
-            More content... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-            venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-            venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit.
-          </p>
-          <p className='pb-4'>
-            More content... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-            venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-            venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit.
-          </p>
-          <p className='pb-4'>
-            More content... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-            venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-            venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit.
-          </p>
-          <p className='pb-4'>
-            More content... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-            venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-            venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit.
-          </p>
-          {/* Agrega más párrafos o contenido aquí si es necesario */}
+        <div className="overflow-y-auto max-h-72 whitespace-pre-line text-left">
+          {content}
+          
         </div>
         <div className='self-center mt-9 cursor-pointer' onClick={onClose}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
