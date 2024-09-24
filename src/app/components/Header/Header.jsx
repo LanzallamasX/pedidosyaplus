@@ -17,9 +17,9 @@ const Header = ({section}) => {
 
         <div className='container mx-auto flex flex-col md:flex-row gap-4 px-5'>
 
-            <div className='w-full md:w-1/2 justify-around items-center md:items-start flex gap-8 flex-col'>
+            <div className='w-full md:w-1/2 justify-center items-center md:items-start flex gap-12 flex-col'>
                 <div className='flex flex-col items-center md:items-start'>
-                    <h1 className='textaBlack text-center md:text-left font-48 text-white xl:w-2/3 pb-6'>
+                    <h1 className='textaBlack text-center md:text-left font-48 text-white xl:w-10/12 pb-6 md:pr-8'>
                         {title}
                     </h1>
                     <BgPromo >
