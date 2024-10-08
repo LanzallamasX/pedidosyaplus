@@ -34,7 +34,7 @@ const Header = ({section}) => {
             </div>
 
             <div className='w-full md:w-1/2 flex justify-center relative'>
-                <Image className='absolute w-10/12 top-[-8px] ms:top-[0px] ' src="/images/trama.svg" alt="Uruguay" width={489} height={550} />
+                <Image className='absolute w-10/12 top-[-8px] md:top-[0px] ' src="/images/trama.svg" alt="Uruguay" width={489} height={550} />
                 <Image className='z-10 w-4/5 md:w-[489px] pb-0 md:pt-2' src={imageSrc} alt="Pedidos Ya Plus" width={489} height={550} />
                 <div className='block md:hidden absolute bottom-10 z-50'>
                     <MainButton textButton={cta} />
