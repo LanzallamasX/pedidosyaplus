@@ -20,7 +20,7 @@ const Benefits = ({section}) => {
     <section id="benefits" className={`px-5 bg-green md:bg-white`}>
       <div className='container mx-auto flex flex-col gap-4 py-12'>
 
-      <h2 className="font-26 textaHeavy text-center text-black mb-9">{title}</h2>
+      <h2 className="font-26 textaHeavy text-center text-black mb-4">{title}</h2>
 
         <div className=" w-10/12 sm:8/12 md:w-full lg:w-11/12 xl:w-8/12 mx-auto gap-4">
       <Swiper
