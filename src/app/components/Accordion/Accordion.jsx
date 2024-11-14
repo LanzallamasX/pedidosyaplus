@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import AccordionItem from './AccordionItem/AccordionItem';
 import styles from './Accordion.module.css'; 
-import { pageData } from '@/app/data/data';
 
 const faqData = [
   {

@@ -1,0 +1,113 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page",
+    "heroSection": {
+      "title": "Unlimited free shipping and exclusive discounts at thousands of stores in Peru",
+      "promo": {
+        "textIntro": "for",
+        "value": "$3990",
+        "textEnd": "per month"
+      },
+      "imageSrc": "/images/girlHero.png",
+      "cta": "Subscribe"
+    },
+    "benefitSection": {
+      "title": "With Plus enjoy:",
+      "cards": {
+        "card1": {
+          "id": 1,
+          "imageSrc": "/images/icon1.png",
+          "alt": "Shipping",
+          "title": "Unlimited free shipping",
+          "description": "at thousands of stores"
+        },
+        "card2": {
+          "id": 2,
+          "imageSrc": "/images/icon2.png",
+          "alt": "Promotions",
+          "title": "Exclusive promotions",
+          "description": "at restaurants and supermarkets"
+        },
+        "card3": {
+          "id": 3,
+          "imageSrc": "/images/icon3.png",
+          "alt": "Discounts",
+          "title": "Discounts and benefits",
+          "description": "with payment methods"
+        }
+      }
+    },
+    "featuresSection": {
+      "cards": [
+        {
+          "id": 1,
+          "imageSrc": "/images/icon4.png",
+          "alt": "Shipping",
+          "title": "Unlimited free shipping",
+          "description": "On your orders from restaurants, supermarkets, pharmacies, beverages, and more. Enjoy this benefit at your favorite stores.",
+          "bgColor": "bg-red",
+          "textColor": "text-white"
+        },
+        {
+          "id": 2,
+          "imageSrc": "/images/icon3.png",
+          "alt": "Promotions",
+          "title": "Exclusive Discounts",
+          "description": "Exclusive discounts at the stores you love and new promotions every week.",
+          "bgColor": "bg-green",
+          "textColor": "text-black"
+        }
+      ]
+    },
+    "bannerSection": {
+      "title": "Unlimited free shipping and exclusive discounts at thousands of stores",
+      "promo": {
+        "textIntro": "",
+        "value": "4 MONTHS FREE",
+        "textEnd": "",
+        "imagePromo": "/images/spotify.png",
+        "imageSrc": "/images/girlBanner.png",
+        "disclaimer": "* Valid for new Spotify Premium users. Terms and Conditions apply"
+      },
+      "disclaimer": "BANNER DISCLAIMER ARGENTINA",
+      "logo": "/images/logo_spotify.png",
+      "imageSrc": "/images/girlHero.png",
+      "cta": "Subscribe"
+    },
+    "faqsSection": {
+      "title": "Frequently Asked Questions",
+      "accordion": [
+        {
+          "id": "01",
+          "title": "What should I keep in mind for free or discounted shipping?",
+          "content": "Your order must meet the minimum amounts set for both restaurants and markets, payment can be online or in cash, and the delivery must be managed by PedidosYa. Most of the stores available in the app meet these conditions."
+        },
+        {
+          "id": "02",
+          "title": "What should I keep in mind for PedidosYa Market benefits?",
+          "content": "at restaurants and supermarkets"
+        },
+        {
+          "id": "03",
+          "title": "Can I cancel anytime?",
+          "content": "with payment methods"
+        },
+        {
+          "id": "04",
+          "title": "What are the requirements to access up to 4 months free Spotify Premium benefit?",
+          "content": "with payment methods"
+        },
+        {
+          "id": "05",
+          "title": "I'm a Plus user. How can I activate my Spotify Premium benefit?",
+          "content": "with payment methods"
+        }
+      ]
+    },
+    "footerSection": {
+      "disclaimer": "FOOTER DISCLAIMER ARGENTINA",
+      "logo": "/images/pedidosyaplusIso.svg"
+    }
+  }
+}

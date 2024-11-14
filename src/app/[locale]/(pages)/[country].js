@@ -1,9 +1,9 @@
 "use client"
-import Header from "../components/Header/Header";
-import Benefits from "../components/Benefits/Benefits";
-import Featured from "../components/Featured/Featured";
-import Banner from "../components/Banner/Banner";
-import Faq from "../components/Faq/Faq";
+import Header from "../../components/Header/Header";
+import Benefits from "../../components/Benefits/Benefits";
+import Featured from "../../components/Featured/Featured";
+import Banner from "../../components/Banner/Banner";
+import Faq from "../../components/Faq/Faq";
 
 export default function Home() {
   return (

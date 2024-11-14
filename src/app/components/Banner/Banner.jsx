@@ -4,7 +4,7 @@ import BgPromo from '../BgPromo/BgPromo';
 import MainButton from '../MainButton/MainButton';
 import { useState } from 'react';
 import Modal from '../Modal/Modal';
-import { pageData } from '@/app/data/data';
+import { useTranslations } from 'next-intl';
 
 const BannerData = [
     {
@@ -30,9 +30,9 @@ const BannerData = [
     }
 ];
 
-const Banner = ({section}) => {
+const Banner = ({}) => {
+  const t = useTranslations('HomePage');
 
-  const {promo, imageSrc, disclaimer, logo, cta} = pageData[section];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
@@ -45,24 +45,24 @@ const Banner = ({section}) => {
             <div className='w-full md:w-1/2 flex flex-col justify-center items-center gap-6 md:gap-4 relative'>
                 <div>
                   <BgPromo >
-                    <span className='font-40 textaBlackItalic'>{promo.value}</span>
+                    <span className='font-40 textaBlackItalic'>{t('bannerSection.title')}</span>
                   </BgPromo>
                 </div>
                 <Image className='mix-blend-lighten' src={promo.imagePromo} alt="girl" width={260} height={30} />
                 <p className='font-14 textaAltaMedium w-8/12 md:w-4/12 text-center pb-9'>
-                <a onClick={openModal} className="font-14 text-center cursor-pointer hover:text-gray-400">{promo.disclaimer}</a>
+                <a onClick={openModal} className="font-14 text-center cursor-pointer hover:text-gray-400">{t('bannerSection.promo.disclaimer')}</a>
                 </p>
             </div>
 
             <div className='w-full md:w-1/2 flex justify-center md:justify-start relative'>
                 <Image className='absolute top-[80px] left-[0px] md:left-[250px] w-full md:w-6/12' src="/images/tramaBanner.svg" alt="Uruguay" width={463} height={294} />
-                <Image className='z-10' src={promo.imageSrc} alt="girl" width={506} height={390} />
+                <Image className='z-10' src={t('bannerSection.promo.imageSrc')} alt="girl" width={506} height={390} />
 
             </div>
     </section>
 
     <div className='flex justify-center items-center py-16 bg-green' >
-        <MainButton textButton={cta} />
+        <MainButton textButton={t('bannerSection.cta')} />
     </div>
 
     <Modal isOpen={isModalOpen} onClose={closeModal} content={disclaimer} logo={logo} />

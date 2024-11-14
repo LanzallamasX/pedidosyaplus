@@ -1,6 +1,6 @@
 'use client'
-import NavBar from "../components/NavBar/NavBar"
-import Footer from "../components/Footer/Footer";
+import NavBar from "../../components/NavBar/NavBar"
+//import Footer from "../../components/Footer/Footer";
 
 export default function RootLayout({ children }) {
 
@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
         <main className="overflow-hidden">
           {children}
         </main>
-        <Footer section="footerSection" />
+      {/*  <Footer section="footerSection" />  */}
     </>
   )
 }

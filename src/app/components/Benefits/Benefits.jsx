@@ -7,20 +7,21 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';  // Importar estilos de paginación
 import 'swiper/css/autoplay';    // Importar estilos de autoplay (opcional)
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
+import { useTranslations } from 'next-intl';
 
-import { pageData } from '@/app/data/data';
 
 
-const Benefits = ({section}) => {
+const Benefits = ({}) => {
 
-  const { title, cards } = pageData[section];
+  const t = useTranslations('HomePage');
+  const keys = ['benefitSection.cards.card1', 'benefitSection.cards.card2', 'benefitSection.cards.card3'] ;
 
 
   return (
     <section id="benefits" className={`px-5 bg-green md:bg-white`}>
       <div className='container mx-auto flex flex-col gap-4 py-12'>
 
-      <h2 className="font-26 textaHeavy text-center text-black mb-4">{title}</h2>
+      <h2 className="font-26 textaHeavy text-center text-black mb-4">{t('benefitSection.title')}</h2>
 
         <div className=" w-10/12 sm:8/12 md:w-full lg:w-11/12 xl:w-8/12 mx-auto gap-4">
       <Swiper
@@ -112,16 +113,20 @@ const Benefits = ({section}) => {
 
 
 
-      {cards.map((card) => (
+      {keys.map((card) => (
         <SwiperSlide key={card.id} className={`${styles.shadow}`}>
           <CardBenefits 
-            imageSrc={card.imageSrc} 
-            alt={card.alt} 
-            title={card.title} 
-            description={card.description} 
+            imageSrc={t(`${card}.imageSrc`)}
+            alt={t(`${card}.alt`)}
+            title={t(`${card}.title`)}
+            description={t(`${card}.description`)}
           />
         </SwiperSlide>
-      ))}
+
+      ))
+
+
+      }
 
 
         

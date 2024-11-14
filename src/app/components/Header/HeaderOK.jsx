@@ -2,11 +2,13 @@ import Image from 'next/image';
 import BgPromo from '../BgPromo/BgPromo';
 import styles from './Header.module.css'; 
 import MainButton from '../MainButton/MainButton';
-import { useTranslations } from 'next-intl';
 
+import { pageData } from '@/app/data/data';
 
-const Header = ({}) => {
-    const t = useTranslations('HomePage');
+const Header = ({section}) => {
+
+    const { title, promo, imageSrc, cta, } = pageData[section];
+
 
   return (
 
@@ -18,24 +20,24 @@ const Header = ({}) => {
             <div className='w-full md:w-1/2 justify-center items-center md:items-start flex gap-12 flex-col pb-6 md:pb-20'>
                 <div className='flex flex-col items-center md:items-start'>
                     <h1 className='textaBlack text-center md:text-left font-56 text-white xl:w-11/12 pb-6 md:pr-8'>
-                        {t('heroSection.title')}
+                        {title}
                     </h1>
                     <BgPromo >
-                        por <span className='font-32 textaBlackItalic'> {t('heroSection.promo.value')}</span> al mes
+                        por <span className='font-32 textaBlackItalic'>{promo.value}</span> al mes
                     </BgPromo>
                 </div>
 
                 <div className='hidden md:block'>
-                <MainButton textButton={t('heroSection.cta')} /> 
-                 </div>
+                    <MainButton textButton={cta} />
+                </div>
 
             </div>
 
             <div className='w-full md:w-1/2 flex justify-center relative'>
                 <Image className='absolute w-10/12 top-[-8px] md:top-[0px] ' src="/images/trama.svg" alt="Uruguay" width={489} height={550} />
-                <Image className='z-10 w-4/5 md:w-[489px] pb-0 md:pt-2' src={t('heroSection.imageSrc')} alt="Pedidos Ya Plus" width={489} height={550} />
+                <Image className='z-10 w-4/5 md:w-[489px] pb-0 md:pt-2' src={imageSrc} alt="Pedidos Ya Plus" width={489} height={550} />
                 <div className='block md:hidden absolute bottom-10 z-50'>
-                   <MainButton textButton={t('heroSection.cta')} /> 
+                    <MainButton textButton={cta} />
                 </div>
             </div>
 
