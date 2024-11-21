@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import Modal from '../Modal/Modal';
-import { pageData } from '@/app/data/data';
+import { useTranslations } from 'next-intl';
+
 
 const Footer = ({section}) => {
-  const {disclaimer, logo} = pageData[section];
+  const t = useTranslations('HomePage.footerSection');
+
 
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,7 +32,7 @@ const Footer = ({section}) => {
       </div>
     </footer>
 
-    <Modal isOpen={isModalOpen} onClose={closeModal} content={disclaimer} logo={logo} />
+    <Modal isOpen={isModalOpen} onClose={closeModal} content={t('disclaimer')} logo={t('logo')} />
     </>
   );
 }

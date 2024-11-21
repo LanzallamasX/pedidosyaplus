@@ -45,10 +45,10 @@ const Banner = ({}) => {
             <div className='w-full md:w-1/2 flex flex-col justify-center items-center gap-6 md:gap-4 relative'>
                 <div>
                   <BgPromo >
-                    <span className='font-40 textaBlackItalic'>{t('bannerSection.title')}</span>
+                    <span className='font-40 textaBlackItalic'>{t('bannerSection.promo.value')}</span>
                   </BgPromo>
                 </div>
-                <Image className='mix-blend-lighten' src={promo.imagePromo} alt="girl" width={260} height={30} />
+                <Image className='mix-blend-lighten' src={t('bannerSection.promo.imagePromo')} alt="girl" width={260} height={30} />
                 <p className='font-14 textaAltaMedium w-8/12 md:w-4/12 text-center pb-9'>
                 <a onClick={openModal} className="font-14 text-center cursor-pointer hover:text-gray-400">{t('bannerSection.promo.disclaimer')}</a>
                 </p>
@@ -65,7 +65,7 @@ const Banner = ({}) => {
         <MainButton textButton={t('bannerSection.cta')} />
     </div>
 
-    <Modal isOpen={isModalOpen} onClose={closeModal} content={disclaimer} logo={logo} />
+    <Modal isOpen={isModalOpen} onClose={closeModal} content={t('bannerSection.disclaimer')} logo={t('bannerSection.logo')} />
 
     </>
 

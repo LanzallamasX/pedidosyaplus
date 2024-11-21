@@ -1,112 +1,110 @@
 {
   "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page",
     "heroSection": {
-      "title": "Unlimited free shipping and exclusive discounts at thousands of stores in Peru",
+      "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales de EN",
       "promo": {
-        "textIntro": "for",
+        "textIntro": "por",
         "value": "$3990",
-        "textEnd": "per month"
+        "textEnd": "al mes"
       },
       "imageSrc": "/images/girlHero.png",
-      "cta": "Subscribe"
+      "cta": "Suscribite"
     },
     "benefitSection": {
-      "title": "With Plus enjoy:",
+      "title": "Con Plus disfrutá:",
       "cards": {
         "card1": {
           "id": 1,
           "imageSrc": "/images/icon1.png",
-          "alt": "Shipping",
-          "title": "Unlimited free shipping",
-          "description": "at thousands of stores"
+          "alt": "Envios",
+          "title": "Envíos gratis ilimitados",
+          "description": "en miles de locales"
         },
         "card2": {
           "id": 2,
           "imageSrc": "/images/icon2.png",
-          "alt": "Promotions",
-          "title": "Exclusive promotions",
-          "description": "at restaurants and supermarkets"
+          "alt": "Promociones",
+          "title": "Promociones exclusivas",
+          "description": "en restaurantes y supermercados"
         },
         "card3": {
           "id": 3,
           "imageSrc": "/images/icon3.png",
-          "alt": "Discounts",
-          "title": "Discounts and benefits",
-          "description": "with payment methods"
+          "alt": "Descuentos",
+          "title": "Descuentos y beneficios",
+          "description": "con medios de pago"
         }
       }
     },
-    "featuresSection": {
-      "cards": [
-        {
+    "featuresSection": {       
+      "cards": {
+        "card1": {
           "id": 1,
           "imageSrc": "/images/icon4.png",
-          "alt": "Shipping",
-          "title": "Unlimited free shipping",
-          "description": "On your orders from restaurants, supermarkets, pharmacies, beverages, and more. Enjoy this benefit at your favorite stores.",
+          "alt": "Envios",
+          "title": "Envíos gratis ilimitados",
+          "description": "En tus pedidos de restaurantes, supermercados, farmacias, bebidas y más. Disfrutá este beneficio en tus locales preferidos.",
           "bgColor": "bg-red",
           "textColor": "text-white"
         },
-        {
+        "card2": {
           "id": 2,
           "imageSrc": "/images/icon3.png",
-          "alt": "Promotions",
-          "title": "Exclusive Discounts",
-          "description": "Exclusive discounts at the stores you love and new promotions every week.",
+          "alt": "Promociones",
+          "title": "Descuentos Exclusivos",
+          "description": "Descuentos exclusivos en los locales que más te gustan y promociones nuevas todas las semanas.",
           "bgColor": "bg-green",
           "textColor": "text-black"
         }
-      ]
+      }
     },
     "bannerSection": {
-      "title": "Unlimited free shipping and exclusive discounts at thousands of stores",
+      "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales",
       "promo": {
         "textIntro": "",
-        "value": "4 MONTHS FREE",
+        "value": "4 MESES GRATIS",
         "textEnd": "",
         "imagePromo": "/images/spotify.png",
         "imageSrc": "/images/girlBanner.png",
-        "disclaimer": "* Valid for new Spotify Premium users. Terms and Conditions apply"
+        "disclaimer": "* Válido para nuevos usuarios de Spotify Premium. Aplican Términos y Condiciones"
       },
-      "disclaimer": "BANNER DISCLAIMER ARGENTINA",
+      "disclaimer": "disclaimer DE BANNER ARGENTINA",
       "logo": "/images/logo_spotify.png",
       "imageSrc": "/images/girlHero.png",
-      "cta": "Subscribe"
+      "cta": "Suscribite"
     },
     "faqsSection": {
-      "title": "Frequently Asked Questions",
+      "title": "Preguntas frecuentes",
       "accordion": [
         {
           "id": "01",
-          "title": "What should I keep in mind for free or discounted shipping?",
-          "content": "Your order must meet the minimum amounts set for both restaurants and markets, payment can be online or in cash, and the delivery must be managed by PedidosYa. Most of the stores available in the app meet these conditions."
+          "title": "¿Qué tener en cuenta para los envíos  gratis o con descuento????",
+          "content": "Tu pedido debe cumplir con los montos mínimos establecidos tanto para restaurantes como para mercados, el pago puede ser online o en efectivo y la entrega debe estar a cargo de PedidosYa. La mayoría de los locales disponibles en la app cumplen con estas condiciones."
         },
         {
           "id": "02",
-          "title": "What should I keep in mind for PedidosYa Market benefits?",
-          "content": "at restaurants and supermarkets"
+          "title": "¿Qué tener en cuenta para los beneficios de PedidosYa Market?",
+          "content": "en restaurantes y supermercados"
         },
         {
           "id": "03",
-          "title": "Can I cancel anytime?",
-          "content": "with payment methods"
+          "title": "¿Puedo cancelar cuando quiera?",
+          "content": "con medios de pago"
         },
         {
           "id": "04",
-          "title": "What are the requirements to access up to 4 months free Spotify Premium benefit?",
-          "content": "with payment methods"
+          "title": "¿Cuales son los requisitos para acceder al beneficio de hasta 4 meses gratis de Spotify Premium?",
+          "content": "con medios de pago"
         },
         {
           "id": "05",
-          "title": "I'm a Plus user. How can I activate my Spotify Premium benefit?",
-          "content": "with payment methods"
+          "title": "Soy usuario Plus. ¿Cómo puedo activar mi beneficio de Spotify Premium?",
+          "content": "con medios de pago"
         }
       ]
     },
     "footerSection": {
-      "disclaimer": "FOOTER DISCLAIMER ARGENTINA",
+      "disclaimer": "disclaimer DE footer ARGENTINA",
       "logo": "/images/pedidosyaplusIso.svg"
     }
   }

@@ -14,7 +14,7 @@ import { useTranslations } from 'next-intl';
 const Benefits = ({}) => {
 
   const t = useTranslations('HomePage');
-  const keys = ['benefitSection.cards.card1', 'benefitSection.cards.card2', 'benefitSection.cards.card3'] ;
+  const keys = Object.keys(t.raw('benefitSection.cards'));
 
 
   return (
@@ -113,13 +113,13 @@ const Benefits = ({}) => {
 
 
 
-      {keys.map((card) => (
-        <SwiperSlide key={card.id} className={`${styles.shadow}`}>
+      {keys.map((key) => (
+        <SwiperSlide key={key} className={`${styles.shadow}`}>
           <CardBenefits 
-            imageSrc={t(`${card}.imageSrc`)}
-            alt={t(`${card}.alt`)}
-            title={t(`${card}.title`)}
-            description={t(`${card}.description`)}
+              imageSrc={t(`benefitSection.cards.${key}.imageSrc`)}
+              alt={t(`benefitSection.cards.${key}.alt`)}
+              title={t(`benefitSection.cards.${key}.title`)}
+              description={t(`benefitSection.cards.${key}.description`)}
           />
         </SwiperSlide>
 
