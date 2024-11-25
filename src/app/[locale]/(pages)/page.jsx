@@ -12,7 +12,7 @@ import { countries, zones } from "moment-timezone/data/meta/latest.json";
 import { useLocale } from 'next-intl';
 
 
-export default function Home({ locales }) {
+export default function Home({  }) {
   const landings = ["ar", "cl", "bo", "pe", "pe", "ec", "gt", "sv", "hn", "pa", "do", "py", "en"];
   const router = useRouter();
   const pathname = usePathname();
