@@ -13,7 +13,7 @@ import { useLocale } from 'next-intl';
 import moment from "moment-timezone";
 
 export default function Home({ }) {
-  const landings = ["ar", "cl", "bo", "pe", "pe", "ec", "gt", "sv", "hn", "pa", "do", "py", "en"];
+  const landings = ["AR", "CL", "BO", "PE", "PE", "EC", "GT", "SV", "HN", "PA", "DO", "PY", "EN"];
   const router = useRouter();
   const pathname = usePathname();
 
@@ -26,68 +26,53 @@ export default function Home({ }) {
 
   
 
-  useEffect(() => {
-    console.log('Executing getGeoInfo...'); // Verificar si el useEffect se ejecuta
+  
 
+  useEffect(() => {
     const getGeoInfo = () => {
-      const currentPath = pathname.slice(1); // Elimina la barra inicial "/"
-      if (landings.includes(currentPath.toLowerCase())) {
-        return; // No hacer nada si ya estás en una ruta válida
-      }
-  
       const timeZoneToCountry = {};
-      console.log('User TimeZone:', moment.tz.guess()); // Log para depuración
   
-  
-      // Crear un mapa de zonas horarias a países
-      Object.keys(zones).forEach((z) => {
-        const cityArr = z.split("/");
-        const city = cityArr[cityArr.length - 1];
+      Object.keys(zones).forEach(z => {
+        const cityArr = z.split('/');
+        const city = cityArr[cityArr.length-1];
         timeZoneToCountry[city] = countries[zones[z].countries[0]];
-        console.log(city, timeZoneToCountry[city]); // Log para depuración
-        
       });
   
-  
-      let userCity, detectedCountry;
-  
-      // Usar moment-timezone para obtener la zona horaria
-      const userTimeZone = moment.tz.guess();
-      const tzArr = userTimeZone.split("/");
-      userCity = tzArr[tzArr.length - 1];
-      detectedCountry = timeZoneToCountry[userCity];
-  
-      // Si detectamos un país, actualizar el estado
-      if (detectedCountry) {
-        setUserCountry(detectedCountry);
+      let userCity, userCountry, userTimeZone;
+      if (Intl) {
+        userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const tzArr = userTimeZone.split('/');
+        userCity = tzArr[tzArr.length-1];
+        userCountry = timeZoneToCountry[userCity];
+      } else {
+        console.log('No Intl')
       }
-    };
+
+      console.log('userCountry:', userCountry);
+      console.log('userCountry.abbr:', userCountry?.abbr);
+
+      console.log('Is userCountry.abbr in landings?', landings.includes(userCountry?.abbr));
+
+  
+      if (userCountry && landings.includes(userCountry.abbr)) {
+        if(userCountry.abbr === 'DO') {
+          router.push('/rd');
+
+        } else {
+          router.push(`/${userCountry.abbr.toLowerCase()}`);
+
+          
+        }
+      }
+
+    //  console.log('Detected userCountry:', userCountry);
+   //   console.log(userCountry.abbr)
+    }
 
     getGeoInfo();
-    console.log('Zones:', zones);
 
   }, []);
 
-  useEffect(() => {
-    if (userCountry) {
-      console.log('User country detected:', userCountry); // Log para depuración
-      const countryAbbr = userCountry.abbr.toLowerCase();
-      const destination =
-        countryAbbr === "do" ? "/rd" : `/${countryAbbr}`;
-
-      console.log('Redirecting to:', destination); // Log para depuración
-      if (landings.includes(countryAbbr)) {
-        if (typeof window !== "undefined") {
-          router.push(destination);
-        }
-      } else {
-        console.log('Redirecting to /en'); // Log para depuración
-        if (typeof window !== "undefined") {
-          router.push("/en");
-        }
-      }
-    }
-  }, [userCountry, router]);
 
   return (
     <>
