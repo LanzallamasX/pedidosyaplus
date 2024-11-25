@@ -6,83 +6,75 @@ import Banner from "../../components/Banner/Banner";
 import Faq from "../../components/Faq/Faq";
 
 import { useRouter, usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { countries, zones } from "moment-timezone/data/meta/latest.json";
-
 import { useLocale } from 'next-intl';
 
+import moment from "moment-timezone";
 
-export default function Home({  }) {
+export default function Home({ }) {
   const landings = ["ar", "cl", "bo", "pe", "pe", "ec", "gt", "sv", "hn", "pa", "do", "py", "en"];
   const router = useRouter();
   const pathname = usePathname();
-  const timeZoneToCountry = {};
+  const [userCountry, setUserCountry] = useState(null);
 
   const locale = useLocale();
 
   const getGeoInfo = () => {
-   // alert("test");
-    // Si ya estás en una ruta válida, no redirigir
     const currentPath = pathname.slice(1); // Elimina la barra inicial "/"
     if (landings.includes(currentPath.toLowerCase())) {
-      return; // No hacer nada si ya estás en una ruta válida 
+      return; // No hacer nada si ya estás en una ruta válida
     }
 
+    const timeZoneToCountry = {};
 
-
+    // Crear un mapa de zonas horarias a países
     Object.keys(zones).forEach((z) => {
       const cityArr = z.split("/");
       const city = cityArr[cityArr.length - 1];
       timeZoneToCountry[city] = countries[zones[z].countries[0]];
-      console.log(timeZoneToCountry)
-
     });
 
-    let userCity, userCountry, userTimeZone;
+    let userCity, detectedCountry;
 
-    if (Intl) {
-      userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      const tzArr = userTimeZone.split("/");
-      userCity = tzArr[tzArr.length - 1];
-      userCountry = timeZoneToCountry[userCity];
-    } else {
-      console.log("No Intl available");
-    }
+    // Usar moment-timezone para obtener la zona horaria
+    const userTimeZone = moment.tz.guess();
+    const tzArr = userTimeZone.split("/");
+    userCity = tzArr[tzArr.length - 1];
+    detectedCountry = timeZoneToCountry[userCity];
 
-    // Redirigir solo si no estás en una ruta válida
-    if (userCountry && landings.includes(userCountry.abbr.toLowerCase())) {
-      const destination =
-        userCountry.abbr === "DO" ? "/rd" : `/${userCountry.abbr.toLowerCase()}`;
-      router.push(destination);
-    } else {
-      // Redirección predeterminada si no se puede detectar la ubicación
-      router.push("/en");
-    }
-
-
-
+    // Si detectamos un país, actualizar el estado
+    setUserCountry(detectedCountry);
   };
 
   useEffect(() => {
-
     getGeoInfo();
   }, []);
+
+  useEffect(() => {
+    if (userCountry) {
+      // Redirigir solo si tenemos un país detectado
+      if (landings.includes(userCountry.abbr.toLowerCase())) {
+        const destination =
+          userCountry.abbr === "DO" ? "/rd" : `/${userCountry.abbr.toLowerCase()}`;
+        router.push(destination);
+      } else {
+        // Redirección predeterminada si no se puede detectar la ubicación
+        router.push("/en");
+      }
+    }
+  }, [userCountry, router]);
 
   return (
     <>
       <Header section="heroSection" />
       <Benefits section="benefitSection" />
       <Featured section="featuresSection" />
-      {
-        locale === 'hn' || locale === "bo" ? ( 
-          ""
-        )
-        :
-        ( 
-          <Banner section="bannerSection" />
-        )
-      }
-      
+      {locale === 'hn' || locale === "bo" ? (
+        ""
+      ) : (
+        <Banner section="bannerSection" />
+      )}
       <Faq section="faqsSection" />
     </>
   );
