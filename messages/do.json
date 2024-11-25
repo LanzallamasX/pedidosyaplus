@@ -1,14 +1,14 @@
 {
   "HomePage": {
     "heroSection": {
-      "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales de Argentina",
+      "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales de Panama",
       "promo": {
         "textIntro": "por",
-        "value": "$3990",
+        "value": "$395",
         "textEnd": "al mes"
       },
       "imageSrc": "/images/girlHero.png",
-      "cta": "Suscribite"
+      "cta": "Suscríbete"
     },
     "benefitSection": {
       "title": "Con Plus disfrutá:",
@@ -62,7 +62,7 @@
       "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales",
       "promo": {
         "textIntro": "",
-        "value": "4 MESES GRATIS",
+        "value": "3 MESES GRATIS",
         "textEnd": "",
         "imagePromo": "/images/spotify.png",
         "imageSrc": "/images/girlBanner.png",
@@ -71,41 +71,40 @@
       "disclaimer": "disclaimer DE BANNER ARGENTINA",
       "logo": "/images/logo_spotify.png",
       "imageSrc": "/images/girlHero.png",
-      "cta": "Suscribite"
+      "cta": "Suscríbete",
+      "TyC": "https://blog.pedidosya.com.do/"
     },
     "faqsSection": {
       "title": "Preguntas frecuentes",
       "accordion": [
         {
           "id": "01",
-          "title": "¿Qué tener en cuenta para los envíos  gratis o con descuento????",
-          "content": "Tu pedido debe cumplir con los montos mínimos establecidos tanto para restaurantes como para mercados, el pago puede ser online o en efectivo y la entrega debe estar a cargo de PedidosYa. La mayoría de los locales disponibles en la app cumplen con estas condiciones."
+          "title": "¿Qué tener en cuenta para los envíos gratis o con descuento?",
+          "content": "Tu pedido tiene que superar los $195, el pago puede ser online o en efectivo y la entrega a cargo de PedidosYa. La mayoría de los locales disponibles en la app cumplen con estas condiciones."
         },
         {
           "id": "02",
-          "title": "¿Qué tener en cuenta para los beneficios de PedidosYa Market?",
-          "content": "en restaurantes y supermercados"
+          "title": "¿Puedo cancelar cuando quiera?",
+          "content": "Sí. Estamos seguros de que vas a querer ser Plus por siempre, pero si necesitas dar de baja la suscripción, podrás hacerlo en cualquier momento y en menos de 1 minuto."
         },
         {
           "id": "03",
-          "title": "¿Puedo cancelar cuando quiera?",
-          "content": "con medios de pago"
+          "title": "¿Cómo funciona la prueba gratuita?",
+          "content": "Suscríbete y prueba gratis el programa. Al confirmar, se generará un cargo en tu tarjeta pero será devuelto automáticamente. Podrás cancelar en cualquier momento."
         },
         {
           "id": "04",
-          "title": "¿Cuales son los requisitos para acceder al beneficio de hasta 4 meses gratis de Spotify Premium?",
-          "content": "con medios de pago"
-        },
-        {
-          "id": "05",
-          "title": "Soy usuario Plus. ¿Cómo puedo activar mi beneficio de Spotify Premium?",
-          "content": "con medios de pago"
+          "title": "¿Cómo funciona el beneficio de Spotify Premium?",
+          "content": "El beneficio es válido para usuarios de PedidosYa Plus que sean nuevos clientes de Spotify Premium. Luego de confirmar tu suscripción, recibirás un email con la información para acceder al beneficio."
         }
+
       ]
     },
     "footerSection": {
       "disclaimer": "disclaimer DE footer ARGENTINA",
-      "logo": "/images/pedidosyaplusIso.svg"
+      "logo": "/images/pedidosyaplusIso.svg",
+      "TyC": "https://www.pedidosya.com.do/about/tyc_plus",
+      "PP": "https://www.pedidosya.com.do/about/privacy_policies"
     }
   }
 }

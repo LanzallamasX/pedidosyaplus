@@ -4,7 +4,7 @@
       "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales de Argentina",
       "promo": {
         "textIntro": "por",
-        "value": "$3899",
+        "value": "$XXX",
         "textEnd": "al mes"
       },
       "imageSrc": "/images/girlHero.png",
@@ -62,7 +62,7 @@
       "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales",
       "promo": {
         "textIntro": "",
-        "value": "4 MESES GRATIS",
+        "value": "3 MESES GRATIS",
         "textEnd": "",
         "imagePromo": "/images/spotify.png",
         "imageSrc": "/images/girlBanner.png",
@@ -80,7 +80,7 @@
         {
           "id": "01",
           "title": "¿Qué tener en cuenta para los envíos gratis o con descuento?",
-          "content": "Tu pedido tiene que superar los $4500 en restaurantes y $5500 en supermercados, el pago puede ser online o en efectivo y la entrega a cargo de PedidosYa. La mayoría de los locales disponibles en la app cumplen con estas condiciones."
+          "content": "Tu pedido tiene que superar los $ X, el pago puede ser online o en efectivo y la entrega a cargo de PedidosYa. La mayoría de los locales disponibles en la app cumplen con estas condiciones."
         },
         {
           "id": "02",
@@ -103,8 +103,8 @@
     "footerSection": {
       "disclaimer": "disclaimer DE footer ARGENTINA",
       "logo": "/images/pedidosyaplusIso.svg",
-      "TyC": "https://www.pedidosya.com.ar/about/tyc_plus",
-      "PP": "https://www.pedidosya.com.ar/about/privacy_policies"
+      "TyC": "https://www.pedidosya.com.py/about/tyc_plus",
+      "PP": "Link: https://www.pedidosya.com.py/about/privacy_policies"
     }
   }
 }

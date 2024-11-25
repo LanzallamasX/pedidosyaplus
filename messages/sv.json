@@ -1,14 +1,14 @@
 {
   "HomePage": {
     "heroSection": {
-      "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales de Argentina",
+      "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales de Ecuador",
       "promo": {
         "textIntro": "por",
-        "value": "$3899",
+        "value": "$5.99",
         "textEnd": "al mes"
       },
       "imageSrc": "/images/girlHero.png",
-      "cta": "Suscribite"
+      "cta": "Suscríbete"
     },
     "benefitSection": {
       "title": "Con Plus disfrutá:",
@@ -62,7 +62,7 @@
       "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales",
       "promo": {
         "textIntro": "",
-        "value": "4 MESES GRATIS",
+        "value": "3 MESES GRATIS",
         "textEnd": "",
         "imagePromo": "/images/spotify.png",
         "imageSrc": "/images/girlBanner.png",
@@ -71,8 +71,8 @@
       "disclaimer": "disclaimer DE BANNER ARGENTINA",
       "logo": "/images/logo_spotify.png",
       "imageSrc": "/images/girlHero.png",
-      "cta": "Suscribite",
-      "TyC": "https://blog.pedidosya.com.ar/"
+      "cta": "Suscríbete",
+      "TyC": "https://www.pedidosya.cl/about/tyc_plus"
     },
     "faqsSection": {
       "title": "Preguntas frecuentes",
@@ -80,17 +80,17 @@
         {
           "id": "01",
           "title": "¿Qué tener en cuenta para los envíos gratis o con descuento?",
-          "content": "Tu pedido tiene que superar los $4500 en restaurantes y $5500 en supermercados, el pago puede ser online o en efectivo y la entrega a cargo de PedidosYa. La mayoría de los locales disponibles en la app cumplen con estas condiciones."
+          "content": "Tu pedido tiene que superar los $4.99 en restaurantes y $8 en supermercados, el pago puede ser online o en efectivo y la entrega a cargo de PedidosYa. La mayoría de los locales disponibles en la app cumplen con estas condiciones."
         },
         {
           "id": "02",
           "title": "¿Puedo cancelar cuando quiera?",
-          "content": "Sí. Estamos seguros de que vas a querer ser Plus por siempre, pero si necesitás dar de baja la suscripción, podrás hacerlo en cualquier momento y en menos de 1 minuto."
+          "content": "Sí. Estamos seguros de que vas a querer ser Plus por siempre, pero si necesitas dar de baja la suscripción, podrás hacerlo en cualquier momento y en menos de 1 minuto."
         },
         {
           "id": "03",
           "title": "¿Cómo funciona la prueba gratuita?",
-          "content": "Suscribite y probá gratis el programa. Al confirmar, se generará un cargo en tu tarjeta pero será devuelto automáticamente. Podrás cancelar en cualquier momento."
+          "content": "Suscríbete y prueba gratis el programa. Al confirmar, se generará un cargo en tu tarjeta pero será devuelto automáticamente. Podrás cancelar en cualquier momento."
         },
         {
           "id": "04",
@@ -103,8 +103,8 @@
     "footerSection": {
       "disclaimer": "disclaimer DE footer ARGENTINA",
       "logo": "/images/pedidosyaplusIso.svg",
-      "TyC": "https://www.pedidosya.com.ar/about/tyc_plus",
-      "PP": "https://www.pedidosya.com.ar/about/privacy_policies"
+      "TyC": "https://www.pedidosyasv.com.sv/about/tyc_plus",
+      "PP": "https://www.pedidosyasv.com.sv/about/privacy_policies"
     }
   }
 }

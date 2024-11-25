@@ -25,8 +25,8 @@ const Footer = ({section}) => {
 
         <div className="flex flex-col md:flex-row gap-2 items-center justify-center textaRegular font-18">
           <p className='font-14 text-center'>© 2024  PedidosYa</p>
-          <a onClick={openModal} className="font-14 text-center hover:text-gray-400 cursor-pointer">Términos y Condiciones</a>
-          <a onClick={openModal} className="font-14 text-center hover:text-gray-400 cursor-pointer">Politica de privacidad</a>
+          <a href={t('TyC')} target='_blank' className="font-14 text-center hover:text-gray-400 cursor-pointer">Términos y Condiciones</a>
+          <a href={t('PP')} target='_blank' className="font-14 text-center hover:text-gray-400 cursor-pointer">Politica de privacidad</a>
         </div>
         
       </div>

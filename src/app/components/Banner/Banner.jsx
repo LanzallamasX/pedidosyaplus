@@ -30,7 +30,7 @@ const BannerData = [
     }
 ];
 
-const Banner = ({}) => {
+const Banner = ({ locales }) => {
   const t = useTranslations('HomePage');
 
 
