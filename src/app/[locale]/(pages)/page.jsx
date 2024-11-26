@@ -42,6 +42,11 @@ export default function Home() {
         console.log("No Intl");
       }
 
+      console.log('userCountry:', userCountry);
+      console.log('userCountry.abbr:', userCountry?.abbr);
+
+      console.log('Is userCountry.abbr in landings?', landings.includes(userCountry?.abbr));
+
       if (userCountry && landings.includes(userCountry.abbr)) {
         const targetPath = userCountry.abbr === "DO" ? "/rd" : `/${userCountry.abbr.toLowerCase()}`;
 
