@@ -10,10 +10,10 @@ import { useEffect, useState } from "react";
 import { countries, zones } from "moment-timezone/data/meta/latest.json";
 import { useLocale } from 'next-intl';
 
-import moment from "moment-timezone";
+import { redirect } from 'next/navigation';
 
 export default function Home({ }) {
-  const landings = ["AR", "CL", "BO", "PE", "PE", "EC", "GT", "SV", "HN", "PA", "DO", "PY", "EN"];
+  const landings = ["AR", "CL", "BO", "PE", "EC", "GT", "SV", "HN", "PA", "DO", "PY", "EN"];
   const router = useRouter();
   const pathname = usePathname();
 
@@ -24,9 +24,6 @@ export default function Home({ }) {
 
   const locale = useLocale();
 
-  
-
-  
 
   useEffect(() => {
     const getGeoInfo = () => {
@@ -55,14 +52,14 @@ export default function Home({ }) {
 
   
       if (userCountry && landings.includes(userCountry.abbr)) {
-        if(userCountry.abbr === 'DO') {
-          router.push('/rd');
-
-
+        if (userCountry.abbr === 'DO') {
+          router.push('/do');
         } else {
           router.push(`/${userCountry.abbr.toLowerCase()}`);
-          
         }
+      } else {
+        // Redirige a una página predeterminada o muestra un mensaje
+        router.push('/landing'); // Por ejemplo, una página de "No soportado"
       }
 
     }
