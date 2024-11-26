@@ -4,26 +4,21 @@ import Benefits from "../../components/Benefits/Benefits";
 import Featured from "../../components/Featured/Featured";
 import Banner from "../../components/Banner/Banner";
 import Faq from "../../components/Faq/Faq";
+import Menu from "../../components/Menu/Menu";
+import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
 
 import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { countries, zones } from "moment-timezone/data/meta/latest.json";
 import { useLocale } from 'next-intl';
 
-import { redirect } from 'next/navigation';
-
 export default function Home({ }) {
   const landings = ["AR", "CL", "BO", "PE", "EC", "GT", "SV", "HN", "PA", "DO", "PY", "EN"];
   const router = useRouter();
   const pathname = usePathname();
-
-  console.log('Current pathname:', pathname); // Verifica el valor de pathname
-
-
   const [userCountry, setUserCountry] = useState(null);
-
   const locale = useLocale();
-
 
   useEffect(() => {
     const getGeoInfo = () => {
@@ -42,44 +37,52 @@ export default function Home({ }) {
         userCity = tzArr[tzArr.length-1];
         userCountry = timeZoneToCountry[userCity];
       } else {
-        console.log('No Intl')
+        console.log('No Intl');
       }
 
-      console.log('userCountry:', userCountry);
-      console.log('userCountry.abbr:', userCountry?.abbr);
+      setUserCountry(userCountry);  
+    };
 
+    getGeoInfo();
+  }, []);  
+
+  useEffect(() => {
+    // Solo  si estamos en la página /landing o en la raíz (/)
+    if (userCountry && (pathname === '/' || pathname === '/landing')) {
+      console.log('userCountry:', userCountry);
       console.log('Is userCountry.abbr in landings?', landings.includes(userCountry?.abbr));
 
-  
-      if (userCountry && landings.includes(userCountry.abbr)) {
+      if (landings.includes(userCountry.abbr)) {
         if (userCountry.abbr === 'DO') {
           router.push('/do');
         } else {
           router.push(`/${userCountry.abbr.toLowerCase()}`);
         }
       } else {
-        // Redirige a una página predeterminada o muestra un mensaje
-        router.push('/landing'); // Por ejemplo, una página de "No soportado"
+        router.push('/landing'); 
       }
-
     }
-
-    getGeoInfo();
-
-  }, []);
-
+  }, [userCountry, pathname, router]);
 
   return (
     <>
-      <Header section="heroSection" />
-      <Benefits section="benefitSection" />
-      <Featured section="featuresSection" />
-      {locale === 'hn' || locale === "bo" ? (
-        ""
+      {locale === 'landing' ? (
+        <Menu />
       ) : (
-        <Banner section="bannerSection" />
+        <>
+          <NavBar />
+          <Header section="heroSection" />
+          <Benefits section="benefitSection" />
+          <Featured section="featuresSection" />
+          {locale === 'hn' || locale === "bo" ? (
+            ""
+          ) : (
+            <Banner section="bannerSection" />
+          )}
+          <Faq section="faqsSection" />
+          <Footer/>
+        </>
       )}
-      <Faq section="faqsSection" />
     </>
   );
 }

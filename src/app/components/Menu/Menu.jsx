@@ -1,25 +1,18 @@
 "use client";
 import Link from "next/link";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
-import Footer from "../components/Footer/Footer";
 import Image from "next/image";
 
-
-
-export default function Home({ }) {
-
+export default function Menu({ }) {
   return (
     <>
       <section className="min-h-screen flex flex-col font-texta">
 
-      <div className="bg-[#100423] text-white py-12 flex justify-center  items-center ">
-        <div className="flex items-center">
-            <Image src="/images/pedidosyaplus.svg" alt="Pedidos Ya Plus" width={212} height={27} />
-          </div>
-      </div>
-
-
-
+        <div className="bg-[#100423] text-white py-12 flex justify-center  items-center ">
+          <div className="flex items-center">
+              <Image src="/images/pedidosyaplus.svg" alt="Pedidos Ya Plus" width={212} height={27} />
+            </div>
+        </div>
         <div className=" px-6 py-8 flex justify-center items-center flex-1 h-full ">
           <div className="container flex flex-wrap w-full justify-center items-center gap-24 ">
                 <Link
@@ -124,8 +117,6 @@ export default function Home({ }) {
             </div>
         </div>
         <div className="bg-[#100423] text-white py-9 "></div>
-
-    
       </section>
   
   

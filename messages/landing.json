@@ -1,0 +1,110 @@
+{
+  "HomePage": {
+    "heroSection": {
+      "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales",
+      "promo": {
+        "textIntro": "por",
+        "value": "$3899",
+        "textEnd": "al mes"
+      },
+      "imageSrc": "/images/girlHero.png",
+      "cta": "Suscribite"
+    },
+    "benefitSection": {
+      "title": "Con Plus disfrutá:",
+      "cards": {
+        "card1": {
+          "id": 1,
+          "imageSrc": "/images/icon1.png",
+          "alt": "Envios",
+          "title": "Envíos gratis ilimitados",
+          "description": "en miles de locales"
+        },
+        "card2": {
+          "id": 2,
+          "imageSrc": "/images/icon2.png",
+          "alt": "Promociones",
+          "title": "Promociones exclusivas",
+          "description": "en restaurantes y supermercados"
+        },
+        "card3": {
+          "id": 3,
+          "imageSrc": "/images/icon3.png",
+          "alt": "Descuentos",
+          "title": "Descuentos y beneficios",
+          "description": "con medios de pago"
+        }
+      }
+    },
+    "featuresSection": {       
+      "cards": {
+        "card1": {
+          "id": 1,
+          "imageSrc": "/images/icon4.png",
+          "alt": "Envios",
+          "title": "Envíos gratis ilimitados",
+          "description": "En tus pedidos de restaurantes, supermercados, farmacias, bebidas y más. Disfrutá este beneficio en tus locales preferidos.",
+          "bgColor": "bg-red",
+          "textColor": "text-white"
+        },
+        "card2": {
+          "id": 2,
+          "imageSrc": "/images/icon3.png",
+          "alt": "Promociones",
+          "title": "Descuentos Exclusivos",
+          "description": "Descuentos exclusivos en los locales que más te gustan y promociones nuevas todas las semanas.",
+          "bgColor": "bg-green",
+          "textColor": "text-black"
+        }
+      }
+    },
+    "bannerSection": {
+      "title": "Envíos gratis ilimitados y descuentos exclusivos en miles de locales",
+      "promo": {
+        "textIntro": "",
+        "value": "4 MESES GRATIS",
+        "textEnd": "",
+        "imagePromo": "/images/spotify.png",
+        "imageSrc": "/images/girlBanner.png",
+        "disclaimer": "* Válido para nuevos usuarios de Spotify Premium. Aplican Términos y Condiciones"
+      },
+      "disclaimer": "disclaimer DE BANNER ARGENTINA",
+      "logo": "/images/logo_spotify.png",
+      "imageSrc": "/images/girlHero.png",
+      "cta": "Suscribite",
+      "TyC": "https://blog.pedidosya.com.ar/"
+    },
+    "faqsSection": {
+      "title": "Preguntas frecuentes",
+      "accordion": [
+        {
+          "id": "01",
+          "title": "¿Qué tener en cuenta para los envíos gratis o con descuento?",
+          "content": "Tu pedido tiene que superar los $4500 en restaurantes y $5500 en supermercados, el pago puede ser online o en efectivo y la entrega a cargo de PedidosYa. La mayoría de los locales disponibles en la app cumplen con estas condiciones."
+        },
+        {
+          "id": "02",
+          "title": "¿Puedo cancelar cuando quiera?",
+          "content": "Sí. Estamos seguros de que vas a querer ser Plus por siempre, pero si necesitás dar de baja la suscripción, podrás hacerlo en cualquier momento y en menos de 1 minuto."
+        },
+        {
+          "id": "03",
+          "title": "¿Cómo funciona la prueba gratuita?",
+          "content": "Suscribite y probá gratis el programa. Al confirmar, se generará un cargo en tu tarjeta pero será devuelto automáticamente. Podrás cancelar en cualquier momento."
+        },
+        {
+          "id": "04",
+          "title": "¿Cómo funciona el beneficio de Spotify Premium?",
+          "content": "El beneficio es válido para usuarios de PedidosYa Plus que sean nuevos clientes de Spotify Premium. Luego de confirmar tu suscripción, recibirás un email con la información para acceder al beneficio."
+        }
+
+      ]
+    },
+    "footerSection": {
+      "disclaimer": "disclaimer DE footer ARGENTINA",
+      "logo": "/images/pedidosyaplusIso.svg",
+      "TyC": "https://www.pedidosya.com.ar/about/tyc_plus",
+      "PP": "https://www.pedidosya.com.ar/about/privacy_policies"
+    }
+  }
+}
