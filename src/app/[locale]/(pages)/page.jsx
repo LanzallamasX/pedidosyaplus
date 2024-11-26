@@ -8,38 +8,44 @@ import Faq from "../../components/Faq/Faq";
 import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { countries, zones } from "moment-timezone/data/meta/latest.json";
-import { useLocale } from "next-intl";
+import { useLocale } from 'next-intl';
 
-export default function Home() {
-  const landings = ["AR", "CL", "BO", "PE", "EC", "GT", "SV", "HN", "PA", "DO", "PY", "EN"];
+import moment from "moment-timezone";
+
+export default function Home({ }) {
+  const landings = ["AR", "CL", "BO", "PE", "PE", "EC", "GT", "SV", "HN", "PA", "DO", "PY", "EN"];
   const router = useRouter();
   const pathname = usePathname();
-  const [redirectHandled, setRedirectHandled] = useState(false); // Controlar redirección
+
+  console.log('Current pathname:', pathname); // Verifica el valor de pathname
+
+
+  const [userCountry, setUserCountry] = useState(null);
+
   const locale = useLocale();
 
-  useEffect(() => {
-    // Verificar si ya se manejó la redirección o si estamos en una ruta válida
-    if (redirectHandled || landings.some((code) => pathname.includes(`/${code.toLowerCase()}`))) {
-      return;
-    }
+  
 
+  
+
+  useEffect(() => {
     const getGeoInfo = () => {
       const timeZoneToCountry = {};
-
-      Object.keys(zones).forEach((z) => {
-        const cityArr = z.split("/");
-        const city = cityArr[cityArr.length - 1];
+  
+      Object.keys(zones).forEach(z => {
+        const cityArr = z.split('/');
+        const city = cityArr[cityArr.length-1];
         timeZoneToCountry[city] = countries[zones[z].countries[0]];
       });
-
+  
       let userCity, userCountry, userTimeZone;
       if (Intl) {
         userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        const tzArr = userTimeZone.split("/");
-        userCity = tzArr[tzArr.length - 1];
+        const tzArr = userTimeZone.split('/');
+        userCity = tzArr[tzArr.length-1];
         userCountry = timeZoneToCountry[userCity];
       } else {
-        console.log("No Intl");
+        console.log('No Intl')
       }
 
       console.log('userCountry:', userCountry);
@@ -47,26 +53,31 @@ export default function Home() {
 
       console.log('Is userCountry.abbr in landings?', landings.includes(userCountry?.abbr));
 
+  
       if (userCountry && landings.includes(userCountry.abbr)) {
-        const targetPath = userCountry.abbr === "DO" ? "/rd" : `/${userCountry.abbr.toLowerCase()}`;
+        if(userCountry.abbr === 'DO') {
+          router.push('/rd');
 
-        // Solo redirigir si no estamos en la ruta correcta
-        if (pathname !== targetPath) {
-          router.push(targetPath);
+
+        } else {
+          router.push(`/${userCountry.abbr.toLowerCase()}`);
+          
         }
-        setRedirectHandled(true); // Marcar que la redirección fue manejada
       }
-    };
+
+    }
 
     getGeoInfo();
-  }, [redirectHandled, pathname, router, landings]);
+
+  }, []);
+
 
   return (
     <>
       <Header section="heroSection" />
       <Benefits section="benefitSection" />
       <Featured section="featuresSection" />
-      {locale === "hn" || locale === "bo" ? (
+      {locale === 'hn' || locale === "bo" ? (
         ""
       ) : (
         <Banner section="bannerSection" />
